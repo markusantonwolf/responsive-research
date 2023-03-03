@@ -6,6 +6,7 @@
   "scripts": {
     "develop": "npm run styles:watch && concurrently --kill-others \"npm run server\"",
     "server": "npx http-server --proxy http://localhost:8080?",
+    "watch": "npm run styles:watch",
     "build:netlify": "npm run styles:build",
     "styles:build": "TAILWIND_MODE=build NODE_ENV=production npx tailwindcss -i ./src/styles/main.css -o ./public/assets/css/styles.css --minify",
     "styles:watch": "npx tailwindcss -i ./src/styles/main.css -o ./public/assets/css/styles.css --watch"
