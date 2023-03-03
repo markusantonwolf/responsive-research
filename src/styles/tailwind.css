@@ -1,0 +1,211 @@
+@tailwind base;
+
+:root {
+    --vh: 1vh;
+    --overflow: hidden;
+    --navigationMenu: 90px;
+    --homeHero: 75vh;
+    --homeHeroScrollHint: block;
+}
+
+html,
+body {
+    font-size: 11px;
+}
+
+@screen sm {
+    html,
+    body {
+        font-size: 12px;
+    }
+}
+@screen md {
+    html,
+    body {
+        font-size: 13px;
+    }
+}
+@screen lg {
+    html,
+    body {
+        font-size: 14px;
+    }
+}
+@screen xl {
+    html,
+    body {
+        font-size: 15px;
+    }
+}
+@screen 2xl {
+    html,
+    body {
+        font-size: 16px;
+    }
+}
+
+input,
+textarea,
+button,
+select,
+div,
+a,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: none;
+    outline-style: none;
+}
+
+/* .text-6xl {
+    font-size: 4.5rem;
+} */
+
+strong {
+    font-weight: bolder;
+}
+
+.textShadow {
+    text-shadow: 1px 1px 2px white, -1px -1px 2px white;
+}
+
+.mobileHero {
+    height: calc(100vh - 120px);
+}
+
+.copy strong,
+.copy b {
+    font-weight: 600;
+    font-size: 100%;
+}
+
+.copy i,
+.copy em {
+    @apply text-primary-600;
+    font-style: italic;
+}
+
+.copy p {
+    margin-bottom: 1rem;
+}
+
+.copy ul {
+    list-style-type: '>';
+    @apply ml-2 mb-2 list-outside font-medium;
+}
+
+.copy ol {
+    list-style-type: decimal;
+    @apply ml-2 mb-2 list-outside font-medium;
+}
+
+.copy ul ul {
+    list-style-type: '-';
+    @apply text-md ml-2 mt-1 list-outside leading-relaxed;
+}
+
+.copy ul ul ul {
+    list-style-type: '-';
+    @apply ml-2 mt-1 list-outside text-sm leading-relaxed;
+}
+.copy ul ul ul ul {
+    list-style-type: '-';
+    @apply ml-2 mt-1 list-outside text-xs leading-relaxed;
+}
+
+.copy ul li,
+.copy ol li {
+    @apply pb-2 pl-2;
+}
+.copy UL UL LI {
+    @apply pl-2;
+}
+.copy UL UL LI:last-of-type {
+    @apply pl-2 pb-0;
+}
+
+.tableofcontents {
+    @apply max-h-screen;
+}
+.tableofcontents A {
+    @apply text-action-500 flex items-center py-1 font-bold leading-snug hover:text-black;
+}
+.tableofcontents UL UL {
+    @apply pb-2;
+}
+.tableofcontents UL UL A {
+    @apply text-base font-bold;
+}
+
+@screen lg {
+    .tableofcontents UL UL A {
+        @apply text-md;
+    }
+}
+
+.tableofcontents UL UL UL {
+    @apply ml-2;
+}
+.tableofcontents UL UL UL A {
+    @apply text-sm font-medium;
+}
+.tableofcontents UL UL UL UL A {
+    @apply text-xs font-medium;
+}
+.tableofcontents code {
+    display: contents;
+    font-family: inherit;
+}
+
+.grid-preview {
+    position: relative;
+    height: 100%;
+}
+
+.grid-preview:first-child::before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-right: 1px solid #d7d7d7;
+    border-left: 1px solid #d7d7d7;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-preview::before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    border-right: 1px solid #d7d7d7;
+    height: 100%;
+}
+
+.bg-gradient-radius {
+    background-image: radial-gradient(
+        ellipse,
+        rgb(255, 255, 255) 0%,
+        var(--tw-gradient-to, rgba(0, 0, 0, 0)) 100%
+    );
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 0px #ffffff, -1px -1px 0px #ffffff, 1px -1px 0px #ffffff,
+        -1px 1px 0px #ffffff, 2px 2px 5px #ffffff, -2px -2px 5px #ffffff, -2px 2px 5px #ffffff,
+        2px -2px 5px #ffffff, 0px 2px 5px #ffffff, 0px -2px 5px #ffffff;
+}
+
+.image-outline {
+    filter: drop-shadow(2px 2px 0px #ced4d6) drop-shadow(-2px -2px 0px #ced4d6)
+        drop-shadow(-2px 2px 0px #ced4d6) drop-shadow(2px -2px 0px #ced4d6);
+    /* filter: drop-shadow(3px 0px 0px #2d3336); */
+}
+
+@tailwind components;
+@tailwind utilities;

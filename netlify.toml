@@ -1,0 +1,8 @@
+# For reference, see:
+# https://github.com/gohugoio/hugoDocs/blob/master/netlify.toml
+[build]
+command = "npm run build:netlify"
+publish = "public"
+
+[context.production.environment]
+NODE_VERSION = "18.14.0"

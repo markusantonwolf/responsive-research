@@ -1,0 +1,37 @@
+{
+  "name": "responsive-research",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "npm run styles:watch && concurrently --kill-others \"npm run server\"",
+    "server": "npx http-server --proxy http://localhost:8080?",
+    "build:netlify": "npm run styles:build",
+    "styles:build": "TAILWIND_MODE=build NODE_ENV=production npx tailwindcss -i ./src/styles/main.css -o ./public/assets/css/styles.css --minify",
+    "styles:watch": "npx tailwindcss -i ./src/styles/main.css -o ./public/assets/css/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markusantonwolf/responsive-research.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markusantonwolf/responsive-research/issues"
+  },
+  "homepage": "https://github.com/markusantonwolf/responsive-research#readme",
+  "devDependencies": {
+    "@markusantonwolf/tailwind-css-plugin-custom-color-palette": "^1.4.0",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
+    "http-server": "^14.1.1",
+    "minify": "^9.2.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.3",
+    "tailwindcss": "^3.2.7"
+  }
+}
